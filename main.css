@@ -1,0 +1,319 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+     :root {
+        --color-grey: #e5e5e5;
+        --color-grey-dark: #e5e5d2;
+        --color-bg: #f9f9f9;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        color: rgb(3, 3, 3);
+    }
+    
+    h4 {
+        font-size: 14px;
+        margin-left: 15px;
+        color: rgb(96, 96, 96);
+        margin-bottom: 10px;
+    }
+    
+    hr {
+        height: 1px;
+        background-color: var(--color-grey);
+        border: none;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .material-icons {
+        color: rgb(96, 96, 96)
+    }
+    
+    .menuBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding: 15px;
+    }
+    
+    .menuBar .logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .menuBar .logo img {
+        width: 100px;
+        margin-left: 15px;
+    }
+    
+    .menuBar i {
+        padding: 0 7px;
+    }
+    
+    .menuBar .search form {
+        border: 1px solid #ddd;
+        height: 35px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .menuBar .search input {
+        width: 500px;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        height: 100%;
+    }
+    
+    .menuBar .search button {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+    }
+    
+    .mainBody {
+        height: calc(100vh - 70px);
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .categories {
+        height: 100%;
+        width: 230px;
+        background-color: white;
+        overflow-y: scroll;
+    }
+    
+    .mainBody .categories .categoriesSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    
+    .mainBody .categories .categoriesSection .category {
+        display: flex;
+        align-items: center;
+        padding: 12px 25px;
+    }
+    
+    .mainBody .categories .categoriesSection .category .active {
+        color: red;
+    }
+    
+    .mainBody .categories .categoriesSection .category span {
+        margin-left: 15px;
+    }
+    
+    .active-span {
+        background: var(--color-grey-dark);
+    }
+    
+    .mainBody .categories .categoriesSection .category:hover {
+        background: var(--color-grey);
+        cursor: pointer;
+    }
+    
+    .videos {
+        background: var(--color-bg);
+        width: 100%;
+        height: 100%;
+        padding: 15px 25px;
+        border-top: 1px solid white;
+        overflow-y: scroll;
+    }
+    
+    .videos .videosGrid {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .videos .videosGrid .video {
+        width: calc(25% - 10px);
+        margin-right: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .videos .videosGrid .video .thumbnail {
+        width: 100%;
+        height: 170px;
+    }
+    
+    .videos .videosGrid .video .thumbnail img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .author img {
+        object-fit: cover;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+    
+    .details {
+        display: flex;
+        margin-top: 10px;
+    }
+    
+    .details .title {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .details .title h3 {
+        color: rgb(3, 3, 3);
+        font-size: 14px;
+    }
+    
+    .details .title a,
+    span {
+        text-decoration: none;
+        color: rgb(96, 96, 96);
+        font-size: 14px;
+    }
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    
+    .row {
+        padding-left: 80px;
+        padding-right: 100px;
+    }
+    
+    .leftcolumn {
+        float: left;
+        width: 58%;
+        padding-left: 10px;
+        /* margin-left: 5px; */
+    }
+    /* Right column */
+    
+    .rightcolumn {
+        float: left;
+        width: 42%;
+        padding-left: 2.5px;
+    }
+    /* Fake image */
+    
+    .rightcolumn .card .img {
+        background-color: #aaa;
+        width: 168px;
+        padding: 20px;
+        display: block;
+        /* margin-left: var(--img-margin-left, auto);
+    margin-right: var(--img-margin-right, auto);
+    max-height: var(--img-max-height, none);
+    max-width: var(--img-max-width, 100%);
+    border-radius: var(--img-border-radius, none); */
+    }
+    /* Add a card effect for articles */
+    
+    .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 2px;
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Footer */
+    /* .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+} */
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    
+    .upnext {
+        display: flex;
+    }
+    
+    .main {
+        background-color: whitesmoke;
+        width: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    
+    .main .icon-grid {
+        display: flex;
+        justify-content: space-around;
+        padding-right: 50%;
+    }
+    
+    .main .icon-grid .top-icon {
+        margin-right: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0;
+        padding-inline: 1px;
+    }
+    
+    .main .icon-grid .top-icon .image {
+        width: 50%;
+        height: 150px;
+        padding: 20px 10px 1px 5px;
+    }
+    
+    .main .icon-grid .top-icon .image img {
+        object-fit: cover;
+        border-radius: 50%;
+        padding-block: 3px;
+    }
+    
+    .caption {
+        display: flex;
+        margin-top: 3px;
+    }
+    
+    .videoList {
+        cursor: pointer;
+    }
+    
+    .caption p {
+        color: rgb(3, 3, 3);
+        font-size: 14px;
+        text-align: relative;
+        padding-left: 18px;
+        padding-top: 1%;
+    }
+    
+    .trendVid {
+        display: flex;
+        padding: 8px;
+    }
+    
+    .trendVid img {
+        margin-left: 20px;
+    }
