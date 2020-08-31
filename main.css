@@ -44,6 +44,7 @@
         align-items: center;
         height: 70px;
         padding: 15px;
+        position: -webkit-sticky;
     }
     
     .menuBar .logo {
@@ -258,6 +259,16 @@
     
     .upnext {
         display: flex;
+    }
+    
+    .nextVid {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .nextVid .img {
+        margin-bottom: 2px;
+        height: 150px;
     }
     
     .main {
